@@ -23,7 +23,7 @@ public class GameServiceTest {
 
     @Test
     public void addP1Point_basic() {
-        Game game = new Game(null, Point.ZERO,Point.THIRTY,false,false);
+        Game game = new Game(null, Point.ZERO,Point.THIRTY,false,false,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         Assert.assertEquals(Point.FIFTEEN, gameService.addP1Point(game).getP1GameScore());
@@ -33,7 +33,7 @@ public class GameServiceTest {
 
     @Test
     public void addP2Point_basic() {
-        Game game = new Game(null, Point.ZERO,Point.THIRTY,false,false);
+        Game game = new Game(null, Point.ZERO,Point.THIRTY,false,false,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         Assert.assertEquals(Point.FORTY, gameService.addP2Point(game).getP2GameScore());
@@ -43,7 +43,7 @@ public class GameServiceTest {
 
     @Test
     public void addP1Point_deuce1() {
-        Game game = new Game(null, Point.THIRTY,Point.FORTY,false,false);
+        Game game = new Game(null, Point.THIRTY,Point.FORTY,false,false,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         logger.info("deuce -> {}", game.getDeuce());
@@ -58,7 +58,7 @@ public class GameServiceTest {
 
     @Test
     public void addP1Point_deuce2() {
-        Game game = new Game(null, Point.FORTY,Point.ADVANTAGE,false,true);
+        Game game = new Game(null, Point.FORTY,Point.ADVANTAGE,false,true,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         logger.info("deuce -> {}", game.getDeuce());
@@ -73,7 +73,7 @@ public class GameServiceTest {
 
     @Test
     public void addP2Point_deuce1() {
-        Game game = new Game(null, Point.FORTY,Point.THIRTY,false,false);
+        Game game = new Game(null, Point.FORTY,Point.THIRTY,false,false,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         logger.info("deuce -> {}", game.getDeuce());
@@ -88,7 +88,7 @@ public class GameServiceTest {
 
     @Test
     public void addP2Point_deuce2() {
-        Game game = new Game(null, Point.ADVANTAGE,Point.FORTY,false,true);
+        Game game = new Game(null, Point.ADVANTAGE,Point.FORTY,false,true,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         logger.info("deuce -> {}", game.getDeuce());
@@ -102,7 +102,7 @@ public class GameServiceTest {
 
     @Test
     public void addP2Point_advantage() {
-        Game game = new Game(null, Point.FORTY,Point.FORTY,false,true);
+        Game game = new Game(null, Point.FORTY,Point.FORTY,false,true,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         logger.info("deuce -> {}", game.getDeuce());
@@ -118,7 +118,7 @@ public class GameServiceTest {
 
     @Test
     public void addP1Point_advantage() {
-        Game game = new Game(null, Point.FORTY,Point.FORTY,false,true);
+        Game game = new Game(null, Point.FORTY,Point.FORTY,false,true,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         logger.info("deuce -> {}", game.getDeuce());
@@ -133,7 +133,7 @@ public class GameServiceTest {
 
     @Test
     public void addP1Point_win1() {
-        Game game = new Game(null, Point.FORTY,Point.ZERO,false,true);
+        Game game = new Game(null, Point.FORTY,Point.ZERO,false,true,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         logger.info("deuce -> {}", game.getDeuce());
@@ -149,7 +149,7 @@ public class GameServiceTest {
 
     @Test
     public void addP1Point_win2() {
-        Game game = new Game(null, Point.ADVANTAGE,Point.FORTY,false,true);
+        Game game = new Game(null, Point.ADVANTAGE,Point.FORTY,false,true,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         logger.info("deuce -> {}", game.getDeuce());
@@ -165,7 +165,7 @@ public class GameServiceTest {
 
     @Test
     public void addP2Point_win1() {
-        Game game = new Game(null, Point.ZERO,Point.FORTY,false,true);
+        Game game = new Game(null, Point.ZERO,Point.FORTY,false,true,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         logger.info("deuce -> {}", game.getDeuce());
@@ -181,7 +181,7 @@ public class GameServiceTest {
 
     @Test
     public void addP2Point_win2() {
-        Game game = new Game(null, Point.FORTY,Point.ADVANTAGE,false,true);
+        Game game = new Game(null, Point.FORTY,Point.ADVANTAGE,false,true,null);
         logger.info("p1 -> {}", game.getP1GameScore());
         logger.info("p2 -> {}", game.getP2GameScore());
         logger.info("deuce -> {}", game.getDeuce());

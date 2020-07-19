@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class GameServiceImpl implements GameService {
     @Override
     public Game addP1Point(Game game) {
-        if (game.getGameOver()!=true){
+        if (! game.getGameOver().equals(true)){
             switch (game.getP1GameScore()) {
                 case ZERO:
                     game.setP1GameScore(Point.FIFTEEN);
@@ -48,7 +48,7 @@ public class GameServiceImpl implements GameService {
 
     @Override
     public Game addP2Point(Game game) {
-        if (game.getGameOver()!=true){
+        if (! game.getGameOver().equals(true)){
             switch (game.getP2GameScore()) {
                 case ZERO:
                     game.setP2GameScore(Point.FIFTEEN);

@@ -17,5 +17,7 @@ public class Match {
     private Player  p2;
     @OneToOne()
     private Scor    scor;
+    @OneToOne()
+    private Player  winnerplayer;
 
 }

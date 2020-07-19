@@ -7,11 +7,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.BeanUtils;
 
+import java.io.Serializable;
+
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GameDto {
+public class GameDto implements Serializable {
     private Long    gameId;
     private Point   p1GameScore;
     private Point   p2GameScore;
